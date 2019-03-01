@@ -1,0 +1,114 @@
+ /**index.wxss**/
+page {
+    height: 100%;
+    width: 100%;
+    background: #EAEAEA; 
+}
+
+.UserInfo{ 
+  height: 290rpx;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7ed;
+  align-items: center;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527532882885&di=21eb5e3a0f0a230846ad5fafafbbe0f3&imgtype=0&src=http%3A%2F%2Fwww.souxz.cn%2Ftsxz%2F201704%2FW020170420410720800672.jpg"); 
+  background-size: 100% 100%;  
+  -moz-background-size: 100% 100%; 
+
+}
+
+.UserInfo-Avatar{
+  margin-top: 30rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%; 
+}
+ 
+.UserInfo-word{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.UserInfo-name{
+  font-size: 14pt;
+  font: medium;
+  height:60rpx;
+  line-height: 60rpx;
+  color: #FFF;
+}
+
+.User-my{
+  margin-top: 3rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f7f7ed;
+  align-items: center;
+}
+
+.my-image{
+  height: 64rpx;
+  width: 64rpx;
+}
+
+.User-my-left{
+  font: regular;
+  font-size: 15pt;
+  height: 100rpx;
+  color: #b2b2b2;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.User-my-right{
+  margin-right: 5rpx;   /*view是弹性的，且text默认以左为起始点，而space between导致view以右端为起始点，从而使margin-right起了效果*/
+ /*设置行高，且文本垂直居中*/
+}
+ 
+.User-my-currentbook{ 
+  margin-top: 20rpx;
+  height: 100rpx;
+  padding-left: 15rpx;
+  font: regular;
+  font-size: 17pt;
+  color: #b2b2b2;
+  background-color: #f7f7ed;
+  line-height: 100rpx;
+}
+
+.User-my-currentbook-scrollview{
+  white-space:nowrap;
+  background-color: #f7f7ed;
+  height: 390rpx;
+}
+
+.User-my-currentbook-view{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width:200rpx;
+  height: 330rpx;
+ display:inline-block;
+  text-align: center;
+  vertical-align:top;  /*解决inline block上对齐问题*/
+
+}
+
+.User-my-currentbook-view-image{
+  width: 180rpx;
+  height: 240rpx;
+  border-radius: 10rpx; 
+  background-size:cover;
+}
+
+.User-my-currentbook-view-name{
+  margin-top: 5rpx;
+  font: medium;
+  color: #000;
+  font-size: 10pt;
+  white-space:pre-wrap;
+  width:200rpx;
+}

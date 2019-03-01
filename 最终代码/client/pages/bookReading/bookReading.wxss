@@ -1,0 +1,93 @@
+/* pages/bookReading/bookReading.wxss */
+/* pages/book/book.wxss */
+page{
+  background: burlywood; 
+}
+.swiper-wrapper {
+  position: absolute;
+  top: 0rpx;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-box {
+  height: 100%;
+}
+.bookcover{
+  position:absolute;
+  top:50rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 50rpx;
+  background: white; 
+  border-radius: 10rpx; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pic-view{
+  width: 360rpx;
+  height: 580rpx;
+}
+.pic{
+  margin-top: 100rpx;
+  width: 360rpx;
+  height: 480rpx;
+}
+/*封面*/
+.name{
+  margin-top: 80rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #353535;
+
+}
+
+.author{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666666;
+}
+/*内容页*/
+.bookpage{
+  height: 100%;
+}
+.page-num{
+  text-align: right;
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+}
+.content{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.content-txt{
+  font-size: 30rpx;
+  font-family: Songti;
+}
+.bottom_view{
+  color: #eeeeee;
+  position: absolute;
+  flex-direction: row;
+  display: flex;
+  width:100%;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.bottom-button{
+  font: medium;
+  font-size: 12pt; 
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 13rpx;
+}
+button::after{
+  border: none;
+}

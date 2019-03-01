@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/book/book",
+    "pages/myCollection/myCollection",
+    "pages/search/search",
+    "pages/myWriting/myWriting",
+    "pages/myPost/myPost",
+    "pages/bookShelf/bookShelf",
+    "pages/store/store",
+    "pages/bookReading/bookReading",
+    "pages/find/find",
+    "pages/editFind/editFind",
+    "pages/editPost/editPost",
+    "pages/editWriting/editWriting"
+  ],
+  "window": {
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "有书共读",
+    "navigationBarTextStyle": "while",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#66ffff",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/首页未选中.png",
+        "selectedIconPath": "/images/首页选中.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "商城",
+        "iconPath": "/images/商城未选中.png",
+        "selectedIconPath": "/images/商城选中.png"
+      },
+      {
+        "pagePath": "pages/bookShelf/bookShelf",
+        "text": "书架",
+        "iconPath": "/images/书架未选中.png",
+        "selectedIconPath": "/images/书架选中.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/images/发现未选中.png",
+        "selectedIconPath": "/images/发现选中.png"
+      }
+    ]
+  }
+}

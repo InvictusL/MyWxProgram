@@ -1,0 +1,37 @@
+/* pages/editFind/editFind.wxss */ 
+page{
+  background-color: #f7f7ed;
+}
+.textarea{
+  
+  height:300rpx;
+  width:94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 50rpx;
+  background-color: #FFF;
+  border-radius: 10rpx;
+}
+.button{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.cover-pic{
+  height: 70rpx;
+  width: 48rpx;
+  margin-left: 20rpx; 
+  margin-top: 20rpx;
+}
+.name-author{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.bookname{
+  font-size: 30rpx;
+  color: gray;
+}
+.author{
+  font-size: 25rpx;
+  color: #CCCCCC;
+}

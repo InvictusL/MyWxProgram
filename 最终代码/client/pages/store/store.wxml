@@ -1,0 +1,68 @@
+
+<!--上方搜索框--> 
+<view class='search' bindtap='goSearchView'> 
+  <input placeholder='🔍 搜索 '></input>
+</view>
+
+<!--书籍推荐轮播图-->
+<swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="500" indicator-active-color='white'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="swiper-image"/>
+    </swiper-item>
+  </block>
+</swiper>  
+
+
+<!--分类、作者、排行按钮-->
+<view class='store-mid'>
+  <!--分类-->
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{category}}">
+    <view class='store-mid-item'>
+      <view>
+        <image src='/images/分类.png' class='store-mid-item-image'></image>
+      </view>
+      <view class='store-mid-item-name'>
+        <text>分类</text>
+      </view>
+    </view>
+  </picker>
+  <!--作者-->
+  <view class='store-mid-item'>
+    <view>
+      <image src='/images/作者.png' class='store-mid-item-image'></image>
+    </view>
+    <view class='store-mid-item-name'>
+      <text>作者</text>
+    </view>
+  </view>
+  <!--排行-->
+  <view class='store-mid-item' bindtap='rank'>
+    <view>
+      <image src='/images/排行.png' class='store-mid-item-image'></image>
+    </view>
+    <view class='store-mid-item-name'>
+      <text>排行</text>
+    </view>
+  </view>
+</view>
+
+<!--为你推荐-->
+<view class='words' wx:if="{{isrank == false}}">
+  <text>{{category[index]}}</text>
+</view>
+<view class='words' wx:else>
+  <text>热度排行</text>
+</view>
+
+<!--书籍信息竖直滑动框-->
+<scroll-view  scroll-y class='mycollection-scrollview'>
+  <view class='mycollection-bookview' wx:for="{{proList}}" bindtap='toBook' data-id = '{{item.bookid}}'>
+      <view>
+        <image class='mycollection-bookview-image' src='{{item.pic1}}'></image>
+      </view>
+      <view class='mycollection-bookview-name'> 
+        <text>{{item.bookname1}}</text>
+      </view>
+  </view>
+</scroll-view>

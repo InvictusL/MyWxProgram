@@ -1,0 +1,29 @@
+
+<!--编辑动态区域-->
+<form bindsubmit='submit'> 
+  <view>
+    <view class='textarea'><!--输入框-->
+      <textarea  placeholder='请输入内容' auto-focus='true' maxlength='200' name="textarea">
+      </textarea>
+    </view>
+    <view class='button'><!--选择书籍 上传 按钮-->
+      <button bindtap='addBook'>添加书籍</button>
+      <view style='display:flex' wx:if="{{isAddBook}}">  
+        <view class='bookcover'>
+            <image class='cover-pic' src="{{addbookitem[0].picture_url}}"></image>
+        </view>
+        <view class='name-author'>
+          <view class='bookname'>
+            <text class='bookname-txt'>{{addbookitem[0].book_name}}</text>
+          </view>
+          <view class='author'>
+            <text class='author-txt'>{{addbookitem[0].author}}</text>
+          </view>
+        </view>
+      </view>
+      <button form-type='submit'>发送动态</button> 
+    </view>
+  </view>
+</form>
+
+

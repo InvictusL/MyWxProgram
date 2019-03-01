@@ -1,0 +1,52 @@
+
+<!--头部用户信息区域-->
+<view class='U-profile'>
+  <view>
+    <image class='Uprofile-pic' src='{{userInfo.avatarUrl}}'></image>
+  </view>
+  <view>
+    <text class='Uname-txt'>{{userInfo.nickName}}</text>
+  </view>
+  <view class='edit-word' bindtap='toEditFind'>
+    <text>添加动态</text>
+  </view>
+</view> 
+
+<!-- 评论区 S -->
+<view class='comment' wx:for="{{commentList}}">
+  <view class='User-info' style="display:flex">
+    <view class='profile'><!--用户头像-->
+      <image class='profile-pic' src="{{item.profileurl}}"></image>
+    </view>
+    <view class='name-content'>
+      <view class='name'><!--用户名-->
+        <text class='name-txt'>{{item.name}}</text>
+      </view>
+      <view class='bookinfo'>
+        <view style='display:flex'>  
+          <view class='bookcover'><!--书籍封面-->
+              <image class='cover-pic' src="{{item.coverurl}}"></image>
+          </view>
+          <view class='name-author'>
+            <view class='bookname'><!--书籍名称-->
+              <text class='bookname-txt'>{{item.bookname}}</text>
+            </view>
+            <view class='author'><!--书籍作者-->
+              <text class='author-txt'>{{item.author}}</text>
+            </view>
+          </view>
+        </view>
+        <view style="height:3rpx;background:#EAEAEA;margin-top:10rpx;margin-left:20rpx;margin-right:20rpx;"><!--分割线-->
+        </view>
+        <view class='comment-content'><!--评论内容-->
+          <text class='content-txt'>{{item.content}}</text>
+        </view>   
+        </view>
+        <view class='comment-content'><!--评论时间-->
+          <text >{{item.commenttime}}</text>
+        </view>
+    </view>
+  </view>
+  <view style="height:20rpx;background:#EAEAEA;margin-top:20rpx;"></view>
+</view>
+

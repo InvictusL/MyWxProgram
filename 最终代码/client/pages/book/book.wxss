@@ -1,0 +1,110 @@
+/* pages/bookdetail/bookdetail.wxss */
+page{
+  background:#f7f7ed; 
+}
+.top{
+  
+}
+.bookcover{
+  width: 220rpx;
+  margin-right: 30rpx;
+  height: 310rpx;
+}
+.cover-pic{
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  width: 180rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 0rpx 5rpx 5rpx #d9d9d9;
+}
+.bookinfo{
+  margin-top: 40rpx; 
+}
+.author{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: brown;
+}
+.readnum{
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+.price{
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+.abstract-title{
+  text-align: center;
+  margin-top:40rpx;
+  font-size: 30rpx; 
+  color: #434343;
+}
+.abstract-content{
+  font-size: 25rpx;
+  color: #434343;
+  line-height: 45rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.profile-pic{
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.name-content{
+  width: 100%;
+}
+.name{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.name-txt{
+  font-size: 30rpx;
+  color: gray;
+}
+.comment-content{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
+.bottom-btn{
+  justify-content:space-between;
+  position: fixed;
+  bottom: 0;
+  background: pink;
+}
+.btn{
+  width: 250rpx;
+  border-radius: 0;
+  color: white;
+  background: #D2B48C;
+  font-weight: 110;
+  font-size: 30rpx;
+}
+
+.share{
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+}
+
+.share-button{
+  height: 100rpx;
+  width: 150rpx;
+  background-color: #f7f7ed; 
+}
+
+button::after{
+  border: none;
+}
+
+.share-image{
+  height: 100rpx;
+  width: 100rpx;
+}

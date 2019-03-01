@@ -1,0 +1,23 @@
+
+<view class='logining'> <!--在框架中，我们用wx:if="{{condition}}"来判断是否需要渲染该代码块-->
+  <view class='image'>
+    <image src='../../images/图片1.jpg' class='image'>
+    </image>
+  </view>
+  <!-- <view>
+    <image 
+      src='/images/user-unlogin.png'
+      style='height:200rpx;width:200rpx;'> 
+  </view> -->
+  <view class='logining-button'>
+    <button   
+      open-type="getUserInfo" 
+      bindgetuserinfo="bindGetUserInfo"
+      class='logining-button'>
+        立即登录
+    </button>
+  </view> 
+  <!-- <view class='hello'>
+    <text> HELLO!</text>
+  </view> -->
+</view>

@@ -1,0 +1,21 @@
+<!--pages/editPost/editPost.wxml-->
+<view class='view'>
+  <view class='myimage-view' wx:if="{{state==0}}" bindtap='addImage'><!--添加图片-->
+    <image src='../../images/海报2.jpg' class='myimage' >
+    </image>
+     <text class='txt'>点击更换图片</text> 
+  </view>
+  <scroll-view scroll-y="true" scroll-x="true" class = "FilePath" bindtouchmove="scroll" bindtouchstart='scroll' bindtouchend='endTou' style="width: 750rpx;height: 800rpx;" wx:elif="{{state==1}}">
+    <image src='{{myimage}}' style="width: {{width}}px;height: {{height}}px;" bindtouchmove="touch" class='img'>
+    </image>
+  </scroll-view>
+  <canvas wx:else style='height:800rpx;width:750rpx;' canvas-id='canvas1' bindtap='addImage'></canvas>
+  <view class='textarea'><!--添加文字-->
+      <textarea  placeholder='请输入内容'  maxlength='200' bindinput='bindinput'>
+      </textarea>
+  </view>
+  <view><!--制作海报 按钮-->
+    <button wx:if="{{state==1}}" class='bottom-button' bindtap='select'>选取图片</button>
+    <button wx:else class='bottom-button' bindtap='addPost'>制作海报</button>
+  </view>
+</view>

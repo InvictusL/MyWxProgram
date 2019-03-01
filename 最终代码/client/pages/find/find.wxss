@@ -1,0 +1,90 @@
+/* pages/find/find.wxss */
+page{
+  background:#f7f7ed; 
+}
+.U-profile{
+  text-align: center;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527532882885&di=21eb5e3a0f0a230846ad5fafafbbe0f3&imgtype=0&src=http%3A%2F%2Fwww.souxz.cn%2Ftsxz%2F201704%2FW020170420410720800672.jpg");
+  background-size: 100% 100%;  
+  -moz-background-size: 100% 100%;  
+  height: 300rpx;
+}
+.Uprofile-pic{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  margin-top: 35rpx;
+  border-style:solid;
+  border-color: white;
+  border-width: 5rpx; 
+}
+.Uname-txt{
+  font-size: 14pt;
+  font: medium;
+  height:50rpx;
+  line-height: 50rpx;
+  color: #FFF;
+}
+.profile-pic{
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.name-content{
+  width: 100%;
+}
+.name{
+  margin-top: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+}
+.name-txt{
+  font-size: 30rpx;
+  color: black;
+}
+.comment-content{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: gray;
+  margin-bottom: 20rpx;
+  white-space: pre-wrap;
+}
+.bookinfo{
+  border-style: solid;
+  border-radius: 10rpx;
+  border-color: #EAEAEA;
+  border-width: 2rpx; 
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.cover-pic{
+  height: 70rpx;
+  width: 48rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.name-author{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.bookname{
+  font-size: 30rpx;
+  color: gray;
+}
+.author{
+  font-size: 25rpx;
+  color: #CCCCCC;
+}
+
+.edit-word{
+  color: #fff;
+  font: medium;
+  font-size: 14pt;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30rpx;
+}

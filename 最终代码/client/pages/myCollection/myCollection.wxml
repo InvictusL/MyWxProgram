@@ -1,0 +1,50 @@
+
+<!--编辑栏-->
+<view class='edit'> 
+  <view wx:if="{{isedit == 0}}" class='edit-word'>
+    <text bindtap='edit'>编辑</text>
+  </view>
+  <view wx:if="{{isedit == 1}}" class='edit-word'>
+    <text bindtap='confirm'>确认</text> 
+  </view>
+</view>
+
+<!--我的收藏栏-->
+<scroll-view  scroll-y class='mycollection-scrollview'>
+  <!--未编辑-->
+  <view class='mycollection-bookview' wx:if="{{isedit == 0}}" wx:for="{{mycollectlist}}" bindtap='toBook' data-id = '{{item.book_id}}'>
+      <view>
+        <image class='mycollection-bookview-image' src='{{item.picture_url}}'></image>
+      </view>
+      <view class='mycollection-bookview-name'> 
+        <text>{{item.book_name}}</text>
+      </view>
+  </view>
+
+  <!--编辑时-->
+  <view class='mycollection-bookview' wx:if="{{isedit==1}}" wx:for="{{mycollectlist}}"  bindtap='select' data-id='{{item.book_id}}'wx:for-index="index" data-index='{{index}}'>
+      <view class='bookview'>
+        <image class='mycollection-bookview-image'  src='{{item.picture_url}}'>    
+        </image>
+        <image  class='choose' wx:if="{{ischoosecoll[index].isselect==1}}" src = '/images/选中后.png'>
+        </image>
+        <image  class='choose' wx:else src = '/images/选中前.png'>
+        </image>        
+        <view class='mycollection-bookview-name'> 
+          <text>{{item.book_name}}</text>
+        </view>
+      </view>
+    </view> 
+</scroll-view>
+
+<!--编辑时底部按钮-->
+<view wx:if="{{isedit==1}}" class='bottomTabbar' style='display:flex;'>
+  <view class='remove' bindtap='remove'>
+    <view style='height:30rpx;'> 
+      <image class='remove-pic' src='/images/垃圾桶.png'></image>
+    </view>  
+    <view>  
+      <text class='remove-txt'>移出收藏</text>
+    </view>
+  </view>
+</view>

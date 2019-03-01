@@ -1,0 +1,116 @@
+
+<!--书籍信息 竖直滑动框-->
+<scroll-view  scroll-y class='mycollection-scrollview'><!--scrollview 不能用flex布局-->
+
+  <!--上方编辑栏-->
+  <view class='edit'> 
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{category}}">
+      <view wx:if="{{isedit == 0}}" class='edit-word' style='margin-left:15rpx;'>
+        <view class='store-mid-item-name'>
+          <text>分类</text>
+        </view>
+      </view>
+    </picker>
+    <view wx:if="{{isedit == 0}}" class='edit-word'>
+      <text bindtap='edit'>编辑</text>
+    </view>
+    <view wx:if="{{isedit == 1}}" class='edit-word'>
+      <text bindtap='confirm'>确认</text> 
+    </view>
+  </view>
+
+  <!-- 滑动框整体view，用来设置flex布局  -->
+  <view class='mycollection-view'>
+
+    <!-- 一本书 未编辑  -->
+    <view class='mycollection-bookview' wx:if="{{isedit==0}}" wx:for="{{proList}}"  bindtap='toBookReading' data-id='{{item[0].book_id}}'>
+      <view> 
+        <image class='mycollection-bookview-image'  src='{{item[0].picture_url}}'>    
+        </image>        
+      </view>
+      <view class='mycollection-bookview-name'> 
+        <text>{{item[0].book_name}}</text>
+      </view>
+    </view>
+
+    <!-- 一本书 正在编辑  -->
+    <view class='mycollection-bookview' wx:if="{{isedit==1}}" wx:for="{{proList}}"  bindtap='select' data-id='{{item[0].book_id}}'wx:for-index="index" data-index='{{index}}'>
+      <view class='bookview'>
+        <image class='mycollection-bookview-image'  src='{{item[0].picture_url}}'>    
+        </image>
+        <image  class='choose' wx:if="{{ischoose[index].isselect==1}}" src = '/images/选中后.png'>
+        </image>
+        <image  class='choose' wx:else src = '/images/选中前.png'>
+        </image>        
+        <view class='mycollection-bookview-name'> 
+          <text>{{item[0].book_name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--一本书 从“添加动态”中的“添加书籍”进入该书架-->
+    <view class='mycollection-bookview' wx:if="{{isedit==2}}" wx:for="{{proList}}"  bindtap='toAddBook' data-id='{{item[0].book_id}}'>
+      <view> 
+        <image class='mycollection-bookview-image'  src='{{item[0].picture_url}}'>    
+        </image>        
+      </view>
+      <view class='mycollection-bookview-name'> 
+        <text>{{item[0].book_name}}</text>
+      </view>
+    </view>
+
+    <!-- 书目结尾 +号 跳转到商城  -->
+    <view class='mycollection-add' bindtap='toStore'> 
+      <view>
+        <image class='mycollection-add-image' src='/images/添加.png'></image>
+      </view>
+    </view>
+  </view>
+  
+</scroll-view>
+
+<!--编辑时底部的按钮-->
+<view  class='bottomTabbar' style='display:flex;' wx:if="{{isedit == 1}}">
+  <!--移除书架 按钮-->
+  <view class='remove' bindtap='remove' wx:if="{{index == 0}}">
+    <view style='height:30rpx;'> 
+      <image class='remove-pic' src='/images/垃圾桶.png'></image> 
+    </view>  
+    <view>  
+      <text class='remove-txt'>移出书架</text>
+    </view>
+  </view>
+  <!--移除分组 按钮-->
+  <view class='remove' bindtap='removeoutcate' wx:if="{{index != 0}}">
+    <view style='height:30rpx;'> 
+      <image class='remove-pic' src='/images/垃圾桶.png'></image> 
+    </view>  
+    <view>  
+      <text class='remove-txt'>移出分组</text>
+    </view>
+  </view>
+
+  <!--添加分类 按钮-->
+  <view class='addcategory' bindtap='addCategory' wx:if="{{index == 0}}">
+    <view style='height:30rpx;'>
+      <image class='addcategory-pic' src='/images/分类填充.png'></image>
+    </view>
+    <view >
+      <text class='addcategory-txt'>添加到</text>
+    </view>
+  </view>
+  <!--删除分类 按钮-->
+  <view class='addcategory' bindtap='delCategory' wx:if="{{index != 0}}">
+    <view style='height:30rpx;'>
+      <image class='addcategory-pic' src='/images/分类填充.png'></image>
+    </view>
+    <view >
+      <text class='addcategory-txt'>删除分类</text>
+    </view>
+  </view>
+</view>
+
+<!--新建分类 弹窗-->
+<modal hidden="{{hideinput}}" title="新建分类" confirm-text="确定" cancel-text="取消" bindcancel="modalcancel" bindconfirm="modalconfirm">  
+    <input type='text'placeholder="请输入分类名" bindinput='bindinput'/>  
+</modal> 

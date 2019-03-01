@@ -1,0 +1,29 @@
+<!--pages/editWriting/editWrting.wxml-->
+
+<!--编辑动态区域-->
+<form bindsubmit='submit'> 
+  <view>
+    <view class='textarea'><!--输入框-->
+      <textarea  placeholder="请输入内容" value='{{note}}' auto-focus='true' maxlength='200' name="textarea">
+      </textarea>
+    </view>
+    <view class='button'><!--选择书籍 上传 按钮-->
+      <view style='display:flex'>  
+        <view class='bookcover'>
+            <image class='cover-pic' src="{{bookinfo[0].picture_url}}"></image>
+        </view>
+        <view class='name-author'>
+          <view class='bookname'>
+            <text class='bookname-txt'>{{bookinfo[0].book_name}}</text>
+          </view>
+          <view class='author'>
+            <text class='author-txt'>{{bookinfo[0].author}}</text>
+          </view>
+        </view>
+      </view>
+      <button form-type='submit'>保存</button> 
+    </view>
+  </view>
+</form>
+
+

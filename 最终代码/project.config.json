@@ -1,0 +1,88 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx9f5f230923ab437b",
+	"projectname": "1",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "bookreading",
+					"pathName": "pages/bookReading/bookReading",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "book",
+					"pathName": "pages/book/book",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bookshelf",
+					"pathName": "pages/bookShelf/bookShelf",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mycollection",
+					"pathName": "pages/myCollection/myCollection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "store",
+					"pathName": "pages/store/store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "find",
+					"pathName": "pages/find/find",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "editFind",
+					"pathName": "pages/editFind/editFind",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "editPost",
+					"pathName": "pages/editPost/editPost",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "editWriting",
+					"pathName": "pages/editWriting/editWrting",
+					"query": ""
+				}
+			]
+		}
+	}
+}

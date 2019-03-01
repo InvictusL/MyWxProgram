@@ -1,0 +1,37 @@
+<!--pages/bookReading/bookReading.wxml-->
+<!--pages/book/book.wxml-->
+<view class='swiper-wrapper'>
+  <!--总轮播图  -->
+  <swiper class='swiper-box'  current="{{currentpage}}" bindchange='changepage'> 
+  <!--书本封面S  -->
+    <swiper-item> 
+      <view class="bookcover">
+            <view class='pic-view'>
+              <image src="{{bookInfo.book_avatar}}" mode="aspectFit" class = 'pic'></image>
+            </view>
+            <view class="name">{{bookInfo.book_name}}</view>
+            <view class="author">作者：{{bookInfo.author}}</view>
+      </view>
+    </swiper-item>
+    <!--书本封面E  -->
+
+     <!-- 书本内容页面 S-->
+    <swiper-item wx:for="{{pages}}" wx:for-index="index" data-index='{{index}}'>
+      <view class="bookpage" bindtap='showbottom'>
+          <!-- 内容 S -->
+          <view class="page-wrapper">
+            <view class="content"><text class='content-txt'>{{item}}</text></view>
+          </view>
+          <!-- 内容 E -->
+        <view class="page-num">{{index + 1}}</view>
+      </view>
+      <!--底部栏-->
+      <view class="bottom_view" style="display: {{showbottom?'flex':'none'}}">
+        <button class='bottom-button' bindtap='toEditWriting'>读书笔记</button>
+        <button class='bottom-button' bindtap='toEditPost'>读书海报</button>
+      </view>
+    </swiper-item>
+    <!-- 书本内容页面 E-->
+  </swiper>
+</view>
+

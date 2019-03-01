@@ -1,0 +1,36 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7ed;
+}
+.image{
+  width: 98%;
+  height:1100rpx;
+  margin: 10rpx 1%;
+  border-radius: 10rpx;
+}
+
+.logining{
+  display: flex;
+  flex-direction: column; /*将主轴换成了竖直方向 */
+  align-items: center;/*调整竖直方向垂直*/
+  
+}
+
+.logining-button{
+  font: medium;
+  font-size: 18pt; 
+  color: #b2b2b2;
+  background-color: #f7f7ed;
+}
+
+.hello{
+  font:medium;
+  font-size: 40pt;
+  height: 150rpx;
+}
+
+button::after{
+  border: none;
+}

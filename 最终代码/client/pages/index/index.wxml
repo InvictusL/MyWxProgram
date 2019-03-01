@@ -1,0 +1,116 @@
+
+<!--用户信息区域-->
+
+<view class='UserInfo'>
+  <view>
+    <image class="UserInfo-Avatar" src='{{userInfo.avatarUrl}}'>
+    </image>
+  </view>
+  <view>
+    <view class='UserInfo-name'>
+      <text>{{userInfo.nickName}}</text><!--换行会导致显示的文本换行！！！-->
+    </view>
+  </view>
+</view>
+
+<!--我的相关内容区域-->
+
+<!--我的收藏-->
+<view class='User-my' bindtap="goMyCollection" style='margin-top:20rpx;'>
+  <view class='User-my-left'>
+    <image src='/images/收藏.png' class='my-image'>
+    </image>
+    <text>我的收藏</text>
+  </view>
+  <view class="User-my-right">
+    <image src='/images/右箭头.png' class='my-image'>
+    </image>
+  </view>
+</view>
+
+<!--我的读书笔记-->
+<view class='User-my' bindtap="goMyWriting">
+  <view class='User-my-left'>
+    <image src='/images/笔记.png' class='my-image'>
+    </image>
+    <text>我的读书笔记</text>
+  </view>
+  <view class="User-my-right">
+    <image src='/images/右箭头.png' class='my-image'>
+    </image>
+  </view>
+</view>
+
+<!--我的读书海报-->
+<view class='User-my' bindtap="goMyPost">
+  <view class='User-my-left'>
+    <image src='/images/海报.png' class='my-image'>
+    </image>
+    <text>我的读书海报</text>
+  </view>
+  <view class="User-my-right">
+    <image src='/images/右箭头.png' class='my-image'>
+    </image>
+  </view>
+</view>
+
+<!--最近阅读区域-->
+
+<!--上方字体-->
+<view class='User-my-currentbook'>
+  <text>最近阅读</text>
+</view>
+
+<!--最近阅读 左右滑动框-->
+<scroll-view scroll-x="true"  class='User-my-currentbook-scrollview'>
+  <view class='User-my-currentbook-view' wx:for="{{currentbooklist}}">
+    <navigator url='../bookReading/bookReading?bookid={{item.book_id}}' open-type='navigate' wx:if="{{currentbooklist!=null}}">
+      <image class="User-my-currentbook-view-image" mode='aspectFill' src='{{item.picture_url}}'>
+      </image>
+      <view class="User-my-currentbook-view-name">
+        <text>{{item.book_name}}</text>
+      </view>
+      <view class="User-my-currentbook-view-name">
+        <text>{{item.last_readingtime}}</text>
+      </view>
+    </navigator>      
+  </view>
+</scroll-view>
+
+
+<!--  white-space
+normal: 正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)
+pre: 保持HTML源代码的空格与换行,等同与pre标签
+nowrap: 强制文本在一行,除非遇到br换行标签
+pre-wrap: 同pre属性,但是遇到超出容器范围的时候会自动换行
+pre-line: 同pre属性,但是遇到连续空格会被看作一个空格
+inherit: 继承
+-->
+<!--中文文字片段在view中不能换行的问题，要使用强制换行，white-space:pre-line（不会保留空白和tabs），white-space:pre-wrap（会保留空白和tabs）-->
+ <!--index.wxml--> 
+    <!-- 上传图片测试  
+    <view class="uploader">
+        <view class="uploader-text" bindtap="doUpload">
+            <text>上传图片</text>
+        </view>
+        <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image
+                class="uploader-image"
+                src="{{imgUrl}}"
+                mode="aspectFit"
+                bindtap="previewImg"
+            ></image>
+        </view>
+    </view>-->
+
+
+    <!-- 上传图片测试 
+    <view class="uploader" >
+        <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
+            <text>快速增加 CGI</text>
+        </navigator>
+    </view>-->
+
+
+
+

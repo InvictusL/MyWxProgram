@@ -1,0 +1,57 @@
+/* pages/editPost/editPost.wxss */
+page{
+  background-color: #f7f7ed;
+}
+
+.view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myimage-view{
+  height:800rpx;
+  width:100%;
+  background-color: #FFF;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myimage{
+height: 800rpx;
+width:100%;
+}
+
+.textarea{
+  
+  height:200rpx;
+  width:94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 30rpx;
+  background-color: #FFF;
+  border-radius: 10rpx;
+}
+
+.bottom-button{
+  position: fixed;
+  bottom: 0;
+  left: 240rpx;
+  font: medium;
+  font-size: 18pt; 
+  color: #b2b2b2;
+  background-color: #f7f7ed;
+}
+
+button::after{
+  border: none;
+}
+.txt{
+  position: absolute;
+  top:600rpx;
+  left: 260rpx;
+  color: white;
+}

@@ -1,0 +1,127 @@
+/* pages/bookShelf/bookShelf.wxss */ 
+@import "../../searchView/searchView.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  background-size: cover;
+  
+}
+
+.edit{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+}
+
+.edit-word{
+  color: #FFF;
+  font: medium;
+  font-size: 15pt;
+  margin-right: 30rpx;
+}
+
+.search{
+  margin: 10rpx 10rpx;
+  background-color: #FFF;
+  border-radius: 10rpx;
+}
+
+.mycollection-scrollview{
+  /* margin-top: 10rpx;
+  margin-left: 10rpx; */
+  margin-right: 10rpx;
+  height:1120rpx;
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527591719573&di=ad5f4e4a010eb82212784ccb7e65d513&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F05%2F73%2F35r58PICCKk_1024.jpg');
+}
+
+.mycollection-view{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.mycollection-bookview{
+  margin: 0.1rpx 12rpx; 
+  height: 345rpx;
+  width: 220rpx;
+  display:inline-block;
+  text-align: center;
+  vertical-align:top;  /*解决inline block上对齐问题*/
+}
+
+.mycollection-bookview-image{
+  width: 220rpx;
+  height: 294rpx;
+  border-radius: 10rpx; 
+  background-size:cover;
+}
+
+.mycollection-bookview-name{
+  font: medium;
+  color: #FFF;
+  font-size: 10pt;
+  white-space:pre-wrap;
+  width:220rpx; 
+}
+
+.mycollection-add{
+  margin: 0.1rpx 12rpx;
+  width: 220rpx;
+  height: 294rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3rpx solid black;
+}
+
+.mycollection-add-image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.choose{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx; 
+}
+.bookview{
+  position: absolute;
+  width: 220rpx;
+  height: 294rpx;
+}
+.bottomTabbar{
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  height: 97rpx;
+  width: 100%;
+  text-align: center;
+  justify-content: space-around; 
+  line-height: 97rpx;
+}
+.remove{
+  height: 97rpx;
+}
+.remove-pic{
+  width: 50rpx;
+  height: 50rpx;
+}
+.remove-txt{
+  font-size: 20rpx;
+  color: #8a8a8a
+}
+.addcategory{
+  
+}
+.addcategory-pic{
+  width: 50rpx;
+  height: 50rpx;
+}
+.addcategory-txt{
+  font-size: 20rpx;
+  color: #8a8a8a
+}

@@ -1,0 +1,77 @@
+
+<view>  
+  <!-- 上部书籍封面和书籍信息 S-->
+  <view class='top' style='display:flex'>
+    <!-- 书籍封面 S -->
+    <view class='bookcover'>
+      <image class='cover-pic'src="{{coverurl}}"> </image>
+    </view>
+    <!-- 书籍封面 E -->
+    <!-- 书籍信息 S -->
+    <view class='bookinfo'>
+      <view class='title'>
+        <text class='title-txt'>{{title}}</text>
+      </view>
+      <view class='author'>
+        <text class='author-txt'>{{author}}</text>
+      </view>
+      <view class='readnum'>
+        <text class='readnum-txt'>{{readnum}}人在读</text>
+      </view>
+      <view class='price'>
+        <text class='price-txt'>{{price}}元</text>
+      </view>
+    </view>
+    <!-- 书籍信息 E-->
+    <view class='share'>
+      <button open-type='share' class='share-button'><!--plain='true'  会生成无法消除的黑边框-->
+        <image src='../../images/分享.png' class='share-image'></image>
+      </button> 
+    </view>  
+  </view>
+  <!-- 上部书籍封面和书籍信息 E-->
+  <!-- 中部简介 S -->
+  <view class='abstract'>
+    <!-- 标题简介 S -->
+    <view class='abstract-title'>简介</view>
+    <!-- 标题简介 E -->
+    <view style="height:3rpx;background:#EAEAEA"></view>
+    <!-- 简介内容 S -->
+    <scroll-view class="abstract-content" scroll-y style="height:300rpx;">
+      <text>{{abstractContent}}</text>
+    </scroll-view>
+    <!-- 简介内容 E -->
+  </view>
+  <!-- 中部简介 E -->
+  <view style="height:20rpx;background:#EAEAEA"></view>
+  <!-- 评论区 S -->
+  <view class='comment' wx:for="{{commentList}}">
+    <!-- 用户头像和用户名 S -->
+    <view class='User-info' style="display:flex">
+      <view class='profile'>
+        <image class='profile-pic' src="{{item.profileurl}}"></image>
+      </view>
+      <view class='name-content'>
+        <view class='name'>
+          <text class='name-txt'>{{item.name}}</text>
+        </view>
+          <!-- 评论内容 S  -->
+        <view class='comment-content'>
+          <text class='content-txt'>{{item.content}}</text>
+        </view>
+          <!-- 评论内容 E  -->
+        <view style="height:3rpx;background:#EAEAEA;margin-top:10rpx;margin-left:20rpx;"></view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 用户头像和用户名 E -->
+  <!-- 评论区 E -->
+  <!-- 底部按钮 S -->
+  <view class='bottom-btn' style='display:flex'>
+  <button class='btn' bindtap='addToBookshelf'>购买</button>
+  <button class='btn' bindtap='beginRead'>开始阅读</button>
+  <button class='btn' bindtap='addToCollect'>收藏</button>
+  </view>
+  <!-- 底部按钮 E -->
+</view>
